@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.5.0/styles/overlayscrollbars.min.css"
+      integrity="sha512-y2X7/N2/LOvn3Xay60PkD1YqTQv34lOyR1qX1CT7+2sEXmnKjYj33kEn0bXzbk4+y8Q9leu2g7EqGWiBNv1NkA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      header {
+        background-color: mediumorchid;
+        color: white;
+        flex-direction: column;
+      }
+      header,
+      section {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 4rem 1rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+      }
+      button {
+        color: black;
+        background-color: moccasin;
+        border: none;
+        padding: 1rem 1.2rem;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 15px;
+      }
+      button:hover {
+        background-color: chocolate;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .actions > * {
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .overlay {
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top" style="background-color: royalblue">
+      <h1>Scrollbar</h1>
+      <div class="overlay">
+        <div class="actions">
+          <button data-target="#contacts" data-tippy-content="Tooltip">
+            Contacts
+          </button>
+          <button data-target="#features" data-mt-duration="2550">
+            Our Features
+          </button>
+          <button data-target="#map" data-mt-duration="2550">Map</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="features">
+      <h2>Features</h2>
+    </section>
+
+    <section id="contacts" style="background-color: navajowhite">
+      <h2>Contacts</h2>
+    </section>
+
+    <section id="map" style="background-color: skyblue">
+      <h2>Map</h2>
+      <button>Go Top</button>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.5.0/browser/overlayscrollbars.browser.es6.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
