@@ -7,12 +7,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <title>swiper</title>
+    <title>lazysizes</title>
   </head>
   <style>
     .swiper {
       width: 600px;
       height: 300px;
+    }
+    header,
+    section {
+      box-sizing: border-box;
+      height: 100vh;
+    }
+    /* button {
+        position: absolute;
+        display: inline-block;
+        top: 200px;
+        margin-right: 20px;
+      } */
+    button:hover {
+      background-color: navajowhite;
     }
   </style>
   <body>
@@ -51,7 +65,40 @@
       <!-- If we need scrollbar -->
       <div class="swiper-scrollbar"></div>
     </div>
+
+    <header id="top" style="background-color: royalblue">
+      <h1>Hello MoveTo</h1>
+      <div class="actions">
+        <button data-target="#contacts" data-mt-duration="1500">
+          Contacts
+        </button>
+        <button data-target="#features" data-mt-duration="2550">
+          Our Features
+        </button>
+        <a href="#map" style="color: wheat"> Map </a>
+      </div>
+    </header>
+
+    <section id="features">
+      <h2>Features</h2>
+    </section>
+
+    <section id="contacts" style="background-color: navajowhite">
+      <h2>Contacts</h2>
+      <img
+        class="lazyload"
+        data-src="https://fastly.picsum.photos/id/797/600/300.jpg?hmac=aYE4_LaQ381HvEQoV0xJVqL_I8QD9Hacbfg_jGS0Gdg"
+        alt=""
+      />
+    </section>
+
+    <section id="map" style="background-color: skyblue">
+      <h2>Map</h2>
+      <button data-target="#top" data-mt-duration="500">Go Top</button>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
