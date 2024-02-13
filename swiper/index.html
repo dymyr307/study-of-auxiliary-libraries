@@ -3,9 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>swiper</title>
   </head>
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+    }
+  </style>
   <body>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="https://fastly.picsum.photos/id/519/600/300.jpg?hmac=7JOC3kMZK2b2gMhKvjecTJc_MWfNtXTcefulvQOeMgk"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://fastly.picsum.photos/id/127/600/300.jpg?hmac=bMzDxMxe1nZGfFNDvASSlEOyr6itUYLPllfsDejicrc"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://fastly.picsum.photos/id/695/600/300.jpg?hmac=XUyB3pnvfTejHGnOJXNJvipiepcaGcDI72ZXSw6ADSQ"
+            alt=""
+          />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
